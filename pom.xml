@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.projpi</groupId>
+    <artifactId>ShatteredUtilities-Parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <description>A collection of bukkit-related utilities made to be shaded into or included in plugins.</description>
+    <modules>
+        <module>ShatteredUtilities-Core</module>
+        <module>ShatteredUtilities-1.12.2</module>
+        <module>ShatteredUtilities-1.13.2</module>
+        <module>ShatteredUtilities-1.14.2</module>
+        <module>ShatteredUtilities-Dist</module>
+    </modules>
+</project>
