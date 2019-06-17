@@ -1,11 +1,11 @@
-# ShatteredUtilities
-*Not a plugin.*
+#### ShatteredUtilities
+*A collection of bukkit-related utilities made to be shaded into or included in plugins.*
 
-## About
+##### About
 ShatteredUtilities (ShatteredUtil) is a collection of commonly-repeaded code across my plugins. I've written it to 
 reduce the amount of repeated code and allow me to update the code in a more organized way. 
 
-## Supported Versions
+##### Supported Versions
 * 1.12.2
 * 1.13.2
 * 1.14.2
@@ -13,18 +13,18 @@ reduce the amount of repeated code and allow me to update the code in a more org
 I plan to support the most recent release on each of the past three versions actively, as well as any old versions that
 do not become too taxing to maintain.
 
-## Features
+##### Features
 * NBT Manipulation
 * Message sending
 * Message placeholder replacing
 
-## Using This Library
+##### Using This Library
 Requires Git and Maven.
 
 ```bash
 git clone https://github.com/ShatteredSuite/ShatteredUtilities
 cd ShatteredUtilities
-mvn 
+mvn clean install
 ```
 Add this to your `pom.xml`:
 ```xml
