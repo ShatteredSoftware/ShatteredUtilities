@@ -64,6 +64,7 @@ public class Messenger
                 message = message.replaceAll('%' + entry.getKey() + '%', entry.getValue());
             }
         }
+        sender.sendMessage(message);
     }
 
     /**

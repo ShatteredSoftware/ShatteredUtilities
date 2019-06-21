@@ -27,7 +27,7 @@ public class Messages
     {
         messages = new HashMap<>();
         YamlConfiguration defaults = YamlConfiguration.loadConfiguration(new InputStreamReader(
-                instance.getResource("defaultMessages.yml")));
+                instance.getResource("messages.yml")));
         for(String key : config.getKeys(false))
         {
             messages.put(key, ChatColor.translateAlternateColorCodes('&', config.getString(key)));
