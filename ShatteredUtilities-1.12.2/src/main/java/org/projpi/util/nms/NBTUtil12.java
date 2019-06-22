@@ -17,14 +17,24 @@ public class NBTUtil12 extends NBTUtil
     {
         net.minecraft.server.v1_12_R1.ItemStack item = CraftItemStack.asNMSCopy(stack);
         NBTTagCompound compound = item.getTag();
-        //noinspection ConstantConditions
-        return compound != null && type != null ? compound.hasKeyOfType(key, type.typeId) : compound.hasKey(key);
+        if(compound == null)
+        {
+            return false;
+        }
+        return type != null
+                ? compound.hasKeyOfType(key, type.typeId)
+                : compound.hasKey(key);
     }
 
     private boolean hasCompoundAndKey(NBTTagCompound compound, String key, NBTType type)
     {
-        //noinspection ConstantConditions
-        return compound != null && type != null ? compound.hasKeyOfType(key, type.typeId) : compound.hasKey(key);
+        if(compound == null)
+        {
+            return false;
+        }
+        return type != null
+                ? compound.hasKeyOfType(key, type.typeId)
+                : compound.hasKey(key);
     }
 
     @Override
@@ -299,7 +309,12 @@ public class NBTUtil12 extends NBTUtil
         checkArgs(item, key);
         net.minecraft.server.v1_12_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
         NBTTagCompound compound = stack.getTag();
-        return hasCompoundAndKey(compound, key, NBTType.STRING) ? compound.getString(key) : null;
+        if (hasCompoundAndKey(compound, key, NBTType.STRING))
+        {
+            assert compound != null;
+            return compound.getString(key);
+        }
+        else return null;
     }
 
     @Override

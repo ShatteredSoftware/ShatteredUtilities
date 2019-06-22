@@ -61,7 +61,9 @@ public class Messenger
         {
             for(Map.Entry<String, String> entry : vars.entrySet())
             {
-                message = message.replaceAll('%' + entry.getKey() + '%', entry.getValue());
+                message = message.replaceAll('%' +
+                        entry.getKey() + '%',
+                        entry.getValue());
             }
         }
         sender.sendMessage(message);
