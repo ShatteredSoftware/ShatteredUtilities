@@ -65,6 +65,7 @@ public class CooldownManager
         {
             return 0;
         }
-        else return (lastUse.get(uuid) + cooldown) - System.currentTimeMillis();
+        long left = (lastUse.get(uuid) + cooldown) - System.currentTimeMillis();
+        return left > 0 ? left : 0;
     }
 }
