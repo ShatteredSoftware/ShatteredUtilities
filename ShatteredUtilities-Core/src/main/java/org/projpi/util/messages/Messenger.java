@@ -40,9 +40,20 @@ public class Messenger
      */
     public void sendMessage(CommandSender sender, String id)
     {
-        sendMessage(sender, id, null);
+        sendMessage(sender, id, null, false);
     }
 
+    /**
+     * Sends a message without any placeholders.
+     *
+     * @param sender The sender to send a message to.
+     * @param id The id of the message from {@link Messages} to send.
+     * @param prefix Whether to append the prefix.
+     */
+    public void sendMessage(CommandSender sender, String id, boolean prefix)
+    {
+        sendMessage(sender, id, null, prefix);
+    }
 
     /**
      * Sends a message with placeholders.
@@ -53,8 +64,31 @@ public class Messenger
      */
     public void sendMessage(CommandSender sender, String id, Map<String, String> vars)
     {
+        sendMessage(sender, id, vars, false);
+    }
+
+    /**
+     * Sends a message with placeholders.
+     *
+     * @param sender The sender to send a message to.
+     * @param id The id of the message from {@link Messages} to send.
+     * @param vars The list of placeholders to replace.
+     * @param appendPrefix Whether to append the prefix.
+     */
+    public void sendMessage(CommandSender sender, String id, Map<String, String> vars, boolean appendPrefix)
+    {
         if(sender == null)
             throw new IllegalArgumentException("Sender cannot be null.");
+
+        String prefix = "";
+        if(appendPrefix)
+        {
+            prefix = messages.getMessage("prefix");
+            if(prefix == null)
+            {
+                prefix = "";
+            }
+        }
 
         String message = messages.getMessage(id);
 
@@ -67,7 +101,7 @@ public class Messenger
                         entry.getValue());
             }
         }
-        sender.sendMessage(message);
+        sender.sendMessage(prefix + message);
     }
 
     /**
@@ -78,7 +112,19 @@ public class Messenger
      */
     public void sendErrorMessage(CommandSender sender, String id)
     {
-        sendErrorMessage(sender, id, null);
+        sendErrorMessage(sender, id, null, false);
+    }
+
+    /**
+     * Sends an error message without any placeholders. Includes a sound effect.
+     *
+     * @param sender The sender to send a message to.
+     * @param id The id of the message from {@link Messages} to send.
+     * @param prefix Whether to append the prefix.
+     */
+    public void sendErrorMessage(CommandSender sender, String id, boolean prefix)
+    {
+        sendErrorMessage(sender, id, null, prefix);
     }
 
     /**
@@ -89,6 +135,19 @@ public class Messenger
      * @param vars The list of placeholders to replace.
      */
     public void sendErrorMessage(CommandSender sender, String id, Map<String, String> vars)
+    {
+        sendMessage(sender, id, vars, false);
+    }
+
+    /**
+     * Sends an error message with any placeholders. Includes a sound effect.
+     *
+     * @param sender The sender to send a message to.
+     * @param id The id of the message from {@link Messages} to send.
+     * @param vars The list of placeholders to replace.
+     * @param prefix Whether to append the prefix.
+     */
+    public void sendErrorMessage(CommandSender sender, String id, Map<String, String> vars, boolean prefix)
     {
         sendMessage(sender, id, vars);
         if(sender instanceof Player)
