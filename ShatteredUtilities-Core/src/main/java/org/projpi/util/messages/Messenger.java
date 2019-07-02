@@ -1,9 +1,10 @@
-package org.projpi.util;
+package org.projpi.util.messages;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.projpi.util.Sound;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package org.projpi.util;
+package org.projpi.util.messages;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;

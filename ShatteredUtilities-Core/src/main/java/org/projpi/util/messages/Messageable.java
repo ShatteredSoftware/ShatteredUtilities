@@ -1,6 +1,4 @@
-package org.projpi.util.commands;
-
-import org.projpi.util.Messenger;
+package org.projpi.util.messages;
 
 public interface Messageable
 {
