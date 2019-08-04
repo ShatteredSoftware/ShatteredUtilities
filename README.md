@@ -4,7 +4,7 @@
 <p align="center">
 <a href="https://github.com/ShatteredSuite/ShatteredUtilities/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/ShatteredSuite/ShatteredUtilities?style=for-the-badge&logo=github" /></a>
 <a href="https://github.com/ShatteredSuite/ShatteredUtilities/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/ShatteredSuite/ShatteredUtilities?style=for-the-badge&logo=github" /></a>
-<a href="https://github.com/ShatteredSuite/ShatteredUtilities/releases"><img alt="GitHub Version" src="https://img.shields.io/github/release/ShatteredSuite/ShatteredUtilities?label=Github%20Version&style=for-the-badge&logo=github" /></a>
+<a href="https://github.com/ShatteredSuite/ShatteredUtilities/releases"><img alt="GitHub Version" src="https://img.shields.io/github/tag/ShatteredSuite/ShatteredUtilities?label=Github%20Version&style=for-the-badge&logo=github" /></a>
 <a href="https://discord.gg/zUbNX9t"><img alt="Discord" src="https://img.shields.io/badge/Get%20Help-On%20Discord-%237289DA?style=for-the-badge&logo=discord" /></a>
 <a href="ko-fi.com/uberpilot"><img alt="Ko-Fi" src="https://img.shields.io/badge/Support-on%20Ko--fi-%23F16061?style=for-the-badge&logo=ko-fi" /></a>
 </p>
