@@ -1,18 +1,18 @@
 package org.projpi.util.nms;
 
-import net.minecraft.server.v1_13_R2.NBTTagCompound;
-import org.bukkit.craftbukkit.v1_13_R2.inventory.CraftItemStack;
+import net.minecraft.server.v1_14_R1.NBTTagCompound;
+import org.bukkit.craftbukkit.v1_14_R1.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 
 @SuppressWarnings("unused")
-public class NBTUtil13 extends NBTUtil {
-  private NBTTagCompound checkOrMakeCompound(net.minecraft.server.v1_13_R2.ItemStack stack) {
+public class NBTUtil14 extends NBTUtil {
+  private NBTTagCompound checkOrMakeCompound(net.minecraft.server.v1_14_R1.ItemStack stack) {
     NBTTagCompound compound = stack.getTag();
     return compound != null ? compound : new NBTTagCompound();
   }
 
   private boolean hasCompoundAndKey(ItemStack stack, String key, NBTType type) {
-    net.minecraft.server.v1_13_R2.ItemStack item = CraftItemStack.asNMSCopy(stack);
+    net.minecraft.server.v1_14_R1.ItemStack item = CraftItemStack.asNMSCopy(stack);
     NBTTagCompound compound = item.getTag();
     if (compound == null) {
       return false;
@@ -42,7 +42,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Byte getByteNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.BYTE) ? compound.getByte(key) : null;
   }
@@ -50,7 +50,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public byte getByte(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.BYTE) ? compound.getByte(key) : 0x0;
   }
@@ -58,7 +58,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setByte(ItemStack item, String key, byte value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setByte(key, value);
     stack.setTag(compound);
@@ -74,7 +74,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Short getShortNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.SHORT) ? compound.getShort(key) : null;
   }
@@ -82,7 +82,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public short getShort(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.SHORT) ? compound.getShort(key) : 0;
   }
@@ -90,7 +90,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setShort(ItemStack item, String key, short value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setShort(key, value);
     stack.setTag(compound);
@@ -106,7 +106,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Integer getIntNullable(org.bukkit.inventory.ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.INT) ? compound.getInt(key) : null;
   }
@@ -114,7 +114,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public int getInt(org.bukkit.inventory.ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.INT) ? compound.getInt(key) : 0;
   }
@@ -122,7 +122,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setInt(ItemStack item, String key, int value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setInt(key, value);
     stack.setTag(compound);
@@ -138,7 +138,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Long getLongNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.LONG) ? compound.getLong(key) : null;
   }
@@ -146,7 +146,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public long getLong(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.LONG) ? compound.getLong(key) : 0L;
   }
@@ -154,7 +154,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setLong(ItemStack item, String key, long value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setLong(key, value);
     stack.setTag(compound);
@@ -170,7 +170,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Float getFloatNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.FLOAT) ? compound.getFloat(key) : null;
   }
@@ -178,7 +178,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public float getFloat(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.FLOAT) ? compound.getFloat(key) : 0F;
   }
@@ -186,7 +186,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setFloat(ItemStack item, String key, float value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setFloat(key, value);
     stack.setTag(compound);
@@ -202,7 +202,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public Double getDoubleNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.DOUBLE) ? compound.getDouble(key) : null;
   }
@@ -210,7 +210,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public double getDouble(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.DOUBLE) ? compound.getDouble(key) : 0D;
   }
@@ -218,7 +218,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setDouble(ItemStack item, String key, double value) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setDouble(key, value);
     stack.setTag(compound);
@@ -234,7 +234,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public byte[] getByteArrayNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.BYTE_ARRAY) ? compound.getByteArray(key) : null;
   }
@@ -242,7 +242,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public byte[] getByteArray(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.BYTE_ARRAY)
         ? compound.getByteArray(key)
@@ -252,7 +252,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setByteArray(ItemStack item, String key, byte[] value) {
     checkArgs(item, key, value);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setByteArray(key, value);
     stack.setTag(compound);
@@ -268,7 +268,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public String getStringNullable(org.bukkit.inventory.ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.STRING) ? compound.getString(key) : null;
   }
@@ -276,7 +276,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public String getString(org.bukkit.inventory.ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.STRING) ? compound.getString(key) : "";
   }
@@ -284,7 +284,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setString(org.bukkit.inventory.ItemStack item, String key, String value) {
     checkArgs(item, key, value);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setString(key, value);
     stack.setTag(compound);
@@ -300,7 +300,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public int[] getIntArrayNullable(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.INT_ARRAY) ? compound.getIntArray(key) : null;
   }
@@ -308,7 +308,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public int[] getIntArray(ItemStack item, String key) {
     checkArgs(item, key);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = stack.getTag();
     return hasCompoundAndKey(compound, key, NBTType.INT_ARRAY)
         ? compound.getIntArray(key)
@@ -318,7 +318,7 @@ public class NBTUtil13 extends NBTUtil {
   @Override
   public ItemStack setIntArray(ItemStack item, String key, int[] value) {
     checkArgs(item, key, value);
-    net.minecraft.server.v1_13_R2.ItemStack stack = CraftItemStack.asNMSCopy(item);
+    net.minecraft.server.v1_14_R1.ItemStack stack = CraftItemStack.asNMSCopy(item);
     NBTTagCompound compound = checkOrMakeCompound(stack);
     compound.setIntArray(key, value);
     stack.setTag(compound);

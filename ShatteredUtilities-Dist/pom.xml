@@ -5,7 +5,7 @@
     <parent>
         <artifactId>ShatteredUtilities-Parent</artifactId>
         <groupId>org.projpi</groupId>
-        <version>1.5.0</version>
+        <version>1.5.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -62,7 +62,7 @@
         </dependency>
         <dependency>
             <groupId>org.projpi</groupId>
-            <artifactId>ShatteredUtilities-1.14.2</artifactId>
+            <artifactId>ShatteredUtilities-1.14</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>

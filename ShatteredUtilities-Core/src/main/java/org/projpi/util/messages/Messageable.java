@@ -1,6 +1,5 @@
 package org.projpi.util.messages;
 
-public interface Messageable
-{
-    public Messenger getMessenger();
+public interface Messageable {
+  public Messenger getMessenger();
 }
