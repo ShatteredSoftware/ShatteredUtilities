@@ -74,7 +74,7 @@ Add this to your `pom.xml`:
     <dependency>
         <groupId>org.projpi</groupId>
         <artifactId>ShatteredUtilities</artifactId>
-        <version>1.6.0</version>
+        <version>1.6.1</version>
         <scope>compile</scope>
     </dependency>
 </dependencies>

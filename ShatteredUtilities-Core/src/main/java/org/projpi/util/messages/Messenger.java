@@ -86,9 +86,15 @@ public class Messenger {
 
         String message = messages.getMessage(id);
 
+        if(message == null) {
+            instance.getLogger().severe("Failed to load message with id " + id);
+        }
+
         if (vars != null) {
             for (Map.Entry<String, String> entry : vars.entrySet()) {
-                message = message.replaceAll('%' + entry.getKey() + '%', entry.getValue());
+                message = message.replaceAll('%' +
+                    entry.getKey() + '%',
+                    entry.getValue());
             }
         }
         sender.sendMessage(prefix + message);
