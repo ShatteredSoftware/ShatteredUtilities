@@ -88,6 +88,7 @@ public class Messenger {
 
         if(message == null) {
             instance.getLogger().severe("Failed to load message with id " + id);
+            return;
         }
 
         if (vars != null) {
