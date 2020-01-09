@@ -7,13 +7,14 @@
     <groupId>org.projpi</groupId>
     <artifactId>ShatteredUtilities-Parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.5.1</version>
+    <version>1.6.0</version>
     <description>A collection of bukkit-related utilities made to be shaded into or included in plugins.</description>
     <modules>
         <module>ShatteredUtilities-Core</module>
         <module>ShatteredUtilities-1.12.2</module>
         <module>ShatteredUtilities-1.13.2</module>
         <module>ShatteredUtilities-1.14</module>
+        <module>ShatteredUtilities-1.15</module>
         <module>ShatteredUtilities-Dist</module>
     </modules>
 </project>

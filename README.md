@@ -17,6 +17,7 @@ reduce the amount of repeated code and allow me to update the code in a more org
 * 1.12.2
 * 1.13.2
 * 1.14.4
+* 1.15.1
 
 I plan to support the most recent release on each of the past three versions actively, as well as any old versions that
 do not become too taxing to maintain.
@@ -73,7 +74,7 @@ Add this to your `pom.xml`:
     <dependency>
         <groupId>org.projpi</groupId>
         <artifactId>ShatteredUtilities</artifactId>
-        <version>1.5.1</version>
+        <version>1.6.0</version>
         <scope>compile</scope>
     </dependency>
 </dependencies>
